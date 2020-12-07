@@ -1,0 +1,402 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background-color:white;
+    font-family:Arial, Helvetica, Sans-serif;
+}
+
+.header{
+    background: #1abc9c;
+    color:white;
+    text-align:center;
+    word-spacing:5px;
+    line-height:2rem;
+    padding:2rem;
+}
+
+h1{
+    text-align: center;
+    font-family: serif;
+    text-underline-position: under;
+}
+/*styling of the navigation bar begins here*/
+
+.nav{
+    background-color:blue;
+    color:white;
+    text-decoration:none;
+    word-spacing: 1rem;
+    margin:0;
+    text-align:center;
+    line-height:2rem;
+    width:100%;
+    display: inline-block;
+
+
+}
+
+.nav ul li,.nav ul li a{
+    list-style: none;
+    text-decoration:none;
+    line-height:2rem;
+    border-radius:10px;
+    font-size:2rem;    
+    color:white;
+    width:100%;
+    display: inline;
+    transition:1s ease-in;
+    
+}
+
+.nav a:hover{
+    background-color:grey;
+    color: white;
+    
+}
+
+@media(max-width:700px){
+    .nav ul li,.nav ul li a{
+        display: inline;
+        font-size:1rem;
+        line-height: 1rem;
+        font-weight:normal;
+        word-spacing:0.5rem;
+    }
+    .header{
+        word-spacing:normal;
+        line-height: 1.5rem;
+        display:block;
+    }
+    .header h3{
+        font-size:10px;
+    }
+    .location.branch img{
+        max-height: 100px;
+        width:50%;
+         margin:0;
+        padding:0;
+    } .location,.branch{
+        margin:0;
+        padding:0;
+    } 
+}
+
+/*stylying of the navigation bar ends here*/
+
+.body{
+    /*this class is of the body in the index.html page*/
+    font-family: arial;
+    font-size:1.5rem;
+    color:black;
+    margin: 0 2rem 0 2rem;
+}
+
+/*index.html page branches (to be used with javascript)*/
+.location{
+    width: 80%;
+    justify-content: center;
+    text-align: center;    
+    align-items:center;
+    margin-left: 10rem;
+}
+
+.branch{
+    display:none;
+    max-height:650px;
+    text-align: center;
+    margin:0 0 2rem 2rem;
+    
+}
+
+.branch img{
+    width: 80%;
+    max-height: 600px;
+    border:solid 10px cyan;
+    text-align: center;
+
+
+}
+
+.branch p{
+    font-family: georgia;
+    font-size:2rem;
+    text-align: center;
+}
+
+.active{
+    display: block;
+}
+
+#p{
+    text-align: center;
+}
+
+.btns{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn,#bttn{
+    background-color: #0074d9;
+    color:white;
+    font-size: 20px;
+    padding: 5px 20px;
+    border-color:transparent;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+.prev{
+    margin-right:15px;
+}
+
+.btn:disabled{
+    background-color: #777;
+    cursor: not-allowed;
+}
+/*end of styling to be used with javascript*/
+
+/*#p{
+    text-align: center;
+    font-family: geneva;
+}
+*/
+/*styling of the gallery and the recipes pages using grid displays*/
+
+.container{
+    width:100%;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template:"1fr 1fr 1fr 1fr 1fr" 34.33vh
+                   "1fr 1fr 1fr 1fr 1fr" 33.33vh
+                   "1fr 1fr 1fr 1fr 1fr" 33.33vh;
+    grid-gap: 5px;
+
+}
+
+.container .box{
+    position: relative;
+    background-color: #ccc;
+}
+
+.container .box.a{
+    grid-row:span 2;
+}
+
+.container .box.b, .container .box.f, .container .box.h, .container .box.j
+{
+    grid-column:span 2;
+}
+
+.container .box img,.container .box iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+@media (max-width: 991px){
+    .container{
+    grid-template:"1fr 1fr 1fr" 250px
+                   "1fr 1fr 1fr" 250px
+                   "1fr 1fr 1fr" 250px
+                    "1fr 1fr 1fr" 250px
+                   "1fr 1fr 1fr" 250px;
+    }
+
+}
+
+
+@media (max-width: 700px){
+    .container{
+    grid-template:"1fr 1fr" 250px
+                   "1fr 1fr" 250px
+                   "1fr 1fr" 250px
+                    "1fr 1fr" 250px
+                   "1fr 1fr" 250px
+                    "1fr 1fr" 250px
+                   "1fr 1fr" 250px;
+    }
+    .container .box.a{grid-row:span 1;
+}
+
+}
+
+/*end of styling for the gallery and recipies using grids*/
+
+/*style the form page here*/
+.contact{
+    position:relative;
+    min-height:100vh;
+    padding:0 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f00b579d;
+}
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color:rgba(5, 2, 10, 0.884);
+}
+
+.contact .content p{
+    font-weight: 500;
+    color:rgba(5, 2, 10, 0.884);
+}
+
+.contain{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:30px;
+}
+
+.contain .contactinfo{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contain .contactinfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.contain .contactinfo .box .icon img{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40%;
+    font-size: 20px;
+}
+
+.contain .contactinfo .box .text{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: white;
+    font-weight: 300;
+}
+
+.contain .contactinfo .box .text h3{
+    font-weight: 500;
+    color:black
+}
+
+.contactform{
+     width: 40%;
+    padding:40px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.contactform h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactform .inputbox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+.contactform .inputbox input, .contactform .inputbox textarea{
+    width:100%;
+    padding:5px 0;
+    font-size: 16px;
+    margin: none;
+    border: none;
+    border-bottom: 2px solid grey;
+    outline: none;
+    resize: none;
+    cursor: pointer;
+}
+
+.contactform .inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.05s;
+    color: #666;
+}
+
+.contactform .inputbox input:focus ~ span,
+.contactform .inputbox input:valid ~ span,
+.contactform .inputbox textarea:focus ~ span,
+.contactform .inputbox textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactform .inputbox input[type="submit"]{
+    width: 100px;
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media (max-width: 700px){
+    .contact{
+        padding:50px;
+    }
+    .contain{
+        flex-direction: column;
+    }
+    .contain .contactinfo{
+        margin-bottom: 40px;
+    }
+    .contain .contactinfo,
+    .contactform {
+        width: 100%;
+    }
+
+}
+/*end of styling the form page*/
+
+
+
+.footer {
+    margin-top: 2rem;
+    padding: 20px;
+    text-align: center;
+    background: blue;
+}
+
+/*style the icons in the footer*/
+.footer img{
+    border-radius:10px;
+    width:40px;
+    display:inline;
+}
